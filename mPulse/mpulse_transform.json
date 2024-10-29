@@ -9032,7 +9032,7 @@
                 "name": "paramsAkCp",
                 "datatype":
                 {
-                    "type": "string",
+                    "type": "uint32",
                     "index": true,
                     "index_options":
                     {
