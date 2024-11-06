@@ -1,0 +1,1071 @@
+{
+  "name": "default_context_logs",
+  "description": "",
+  "uuid": "d73e8033-3dde-4b54-831c-1c10ffe8fa7e",
+  "created": "2024-05-10T13:56:01.998038Z",
+  "modified": "2024-10-16T12:14:35.093746Z",
+  "settings": {
+    "is_default": true,
+    "rate_limit": null,
+    "sql_transform": "SELECT \narrayMap(x -> REPLACE(x, '\\\"', ''), \nJSONExtractArrayRaw(assumeNotNull(metadataTagsString))) AS metadataTags,\narrayMap(x -> REPLACE(x, '\\\"', ''), \nJSONExtractArrayRaw(assumeNotNull(contextOwnersString))) AS contextOwners,\narrayMap(x -> REPLACE(x, '\\\"', ''), \nJSONExtractArrayRaw(assumeNotNull(contextReferencesString))) AS contextReferences,\narrayMap(x -> REPLACE(x, '\\\"', ''), \nJSONExtractArrayRaw(assumeNotNull(contextViewedString))) AS contextViewed,\n* FROM {STREAM}",
+    "null_values": [],
+    "sample_data": {
+      "result": "HTTP_CLIENT_ERROR",
+      "call_id": "agxkZXZ-dmlhdGVzdHNyFwsSClRlc3RTZXR1cDIYgICAgICA0AkM",
+      "context": {
+        "_notification": {
+          "title": "[WARNING]: APImetrics: All Failures: Example HTTP POST Call",
+          "owners": [
+            "agxkZXZ-dmlhdGVzdHNyEQsSBFVzZXIYgICAgICA0AoM",
+            "public_settings"
+          ],
+          "created": "2019-06-05T17:11:36.444708Z",
+          "category": "WARNING",
+          "viewed_by": [
+            "Martin"
+          ],
+          "references": [
+            "agxkZXZ-dmlhdGVzdHNyFwsSClRlc3RTZXR1cDIYgICAgICA0AkM",
+            "agxkZXZ-dmlhdGVzdHNyGAsSC1Rlc3RSZXN1bHQzGICAgICAgPgJDA"
+          ],
+          "description": "\n<p>\nAPI Call <a href=\"https://client.apimetrics.io/tests/test/agxkZXZ-dmlhdGVzdHNyFwsSClRlc3RTZXR1cDIYgICAgICA0AkM/\">\"Example HTTP POST Call\"</a> has failed :\n<ul>\n<li><b>Server returned a 4XX status. There may be a problem with the test.</b></li>\n\n<li>Calling POST http://google.apimetrics.xyz/status/418</li>\n<li>Got response HTTP 418 I&#39;M A TEAPOT</li>\n\n</ul>\n</p>\n\n<p>Timing breakdown:\n<ul>\n\n<li>The total latency was 56 ms.</li>\n<li>DNS Lookup: 4 ms</li>\n<li>Connect: 24 ms</li>\n\n<li>Upload: 0 ms</li>\n<li>Processing: 0 ms</li>\n<li>Download: 28 ms</li>\n\n</ul>\n</p>\n\n\n</p>\n\n<p>\nView details here:\n<a href=\"https://client.apimetrics.io/tests/result/agxkZXZ-dmlhdGVzdHNyGAsSC1Rlc3RSZXN1bHQzGICAgICAgPgJDA/\">https://client.apimetrics.io/tests/result/agxkZXZ-dmlhdGVzdHNyGAsSC1Rlc3RSZXN1bHQzGICAgICAgPgJDA/</a>\n</p>\n\n<p>Sincerely,<br>\nAPImetrics Team\n</p>\n",
+          "last_update": "2024-06-05T17:11:36.588106Z",
+          "description_text": "\nAPI Call \"Example HTTP POST Call\" (http://localhost:8080/tests/test/agxkZXZ-dmlhdGVzdHNyFwsSClRlc3RTZXR1cDIYgICAgICA0AkM/) has failed :\n\nServer returned a 4XX status. There may be a problem with the test.\nCalling POST http://google.apimetrics.xyz/status/418\nGot response HTTP 418 I&#39;M A TEAPOT\nTiming breakdown:\n  The total latency was 56 ms.\n  DNS Lookup: 4 ms\n  Connect: 24 ms\n\n  Upload: 0 ms\n  Processing: 0 ms\n  Download: 28 ms\n\n\nView details here: \nhttp://localhost:8080/tests/result/agxkZXZ-dmlhdGVzdHNyGAsSC1Rlc3RSZXN1bHQzGICAgICAgPgJDA/\n\n\nAPImetrics Team\n"
+        },
+        "_result_streak": 1,
+        "_result_category": "WARNING"
+      },
+      "call_url": "https://client.apimetrics.io/tests/test/agxkZXZ-dmlhdGVzdHNyFwsSClRlc3RTZXR1cDIYgICAgICA0AkM/",
+      "call_meta": {
+        "name": "Example HTTP POST Call",
+        "tags": [
+          "api_type:update",
+          "sector:telecommunications"
+        ],
+        "domain": "api.sampledata.co.uk",
+        "description": "Auto-generated API Call"
+      },
+      "http_code": 418,
+      "result_id": "agxkZXZ-dmlhdGVzdHNyGAsSC1Rlc3RSZXN1bHQzGICAgICAgPgJDA",
+      "upload_ms": 333,
+      "result_url": " https://client.apimetrics.io/tests/result/agxkZXZ-dmlhdGVzdHNyGAsSC1Rlc3RSZXN1bHQzGICAgICAgPgJDA/",
+      "start_time": "2024-10-07T06:27:17.160556Z",
+      "download_ms": 555,
+      "http_reason": "I'M A TEAPOT",
+      "location_id": "development",
+      "timing_data": {
+        "dns": 2,
+        "upload": 0,
+        "connect": 1,
+        "download": 13522,
+        "processing": 118,
+        "tls_handshake": 234
+      },
+      "workflow_id": null,
+      "result_class": "WARNING",
+      "workflow_url": null,
+      "dns_lookup_ms": 111,
+      "location_data": {
+        "city": "london",
+        "cloud": "Akamai",
+        "region": "eng",
+        "country": "GB",
+        "ip_addr": "169.254.169.126",
+        "latitude": null,
+        "continent": "EU",
+        "longitude": null
+      },
+      "processing_ms": 4479,
+      "response_size": 135,
+      "response_time": 56,
+      "ssl_handshake_ms": 222,
+      "workflow_result_id": null,
+      "workflow_result_url": null
+    },
+    "output_columns": [
+      {
+        "name": "apiCreationTime",
+        "datatype": {
+          "type": "datetime",
+          "index": true,
+          "primary": false,
+          "format": "2006-01-02T15:04:05.999Z",
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/created"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "callID",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/call_id"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "metadataDescription",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/call_meta/description"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "metadataDomain",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/call_meta/domain"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "metadataName",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/call_meta/name"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "metadataTagsString",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/call_meta/tags"
+            ]
+          },
+          "suppress": true
+        }
+      },
+      {
+        "name": "metadataTags",
+        "datatype": {
+          "type": "array",
+          "index": false,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "elements": [
+            {
+              "type": "string",
+              "index": false,
+              "primary": false
+            }
+          ],
+          "source": {
+            "from_input_field": "sql_transform"
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "callURL",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/call_url"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextCategory",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/category"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextDescription",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/description"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextDescriptionText",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/description_text"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextLastUpdate",
+        "datatype": {
+          "type": "datetime",
+          "index": true,
+          "format": "2006-01-02T15:04:05.999999Z",
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/last_update"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextOwnersString",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/owners"
+            ]
+          },
+          "suppress": true
+        }
+      },
+      {
+        "name": "contextOwners",
+        "datatype": {
+          "type": "array",
+          "index": false,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "elements": [
+            {
+              "type": "string",
+              "index": false,
+              "primary": false
+            }
+          ],
+          "source": {
+            "from_input_field": "sql_transform"
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextReferencesString",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/references"
+            ]
+          },
+          "suppress": true
+        }
+      },
+      {
+        "name": "contextReferences",
+        "datatype": {
+          "type": "array",
+          "index": false,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "elements": [
+            {
+              "type": "string",
+              "index": false,
+              "primary": false
+            }
+          ],
+          "source": {
+            "from_input_field": "sql_transform"
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextTitle",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/title"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextViewedString",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_notification/viewed_by"
+            ]
+          },
+          "suppress": true
+        }
+      },
+      {
+        "name": "contextViewed",
+        "datatype": {
+          "type": "array",
+          "index": false,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "elements": [
+            {
+              "type": "string",
+              "index": false,
+              "primary": false
+            }
+          ],
+          "source": {
+            "from_input_field": "sql_transform"
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextResultCategory",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_result_category"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "contextResultStreak",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/context/_result_streak"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "httpCode",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/http_code"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "dnsLookupMSec",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/dns_lookup_ms"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "sslHandshakeMSec",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/ssl_handshake_ms"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "uploadMSec",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/upload_ms"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "processingMSec",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/processing_ms"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "downloadMSec",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/download_ms"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "httpReason",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/http_reason"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "locationID",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_id"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "responseSize",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/response_size"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "responseTime",
+        "datatype": {
+          "type": "uint32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/response_time"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "result",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/result"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "resultClass",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/result_class"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "resultID",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/result_id"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "resultURL",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/result_url"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "workflowId",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/workflow_id"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "workflowResultId",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/workflow_result_id"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "workflowResultUrl",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/workflow_result_url"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "workflowUrl",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/workflow_url"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "startTime",
+        "datatype": {
+          "type": "datetime",
+          "index": false,
+          "primary": true,
+          "format": "2006-01-02T15:04:05.999999Z",
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/start_time"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "city",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/city"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "cloud",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/cloud"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "ipAddr",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/ip_addr"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "region",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/region"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "country",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/country"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "continent",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/continent"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "latitude",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/latitude"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "longitude",
+        "datatype": {
+          "type": "string",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/location_data/longitude"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "dns",
+        "datatype": {
+          "type": "int32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/timing_data/dns"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "connect",
+        "datatype": {
+          "type": "int32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/timing_data/connect"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "tlsHandshake",
+        "datatype": {
+          "type": "int32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/timing_data/tls_handshake"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "upload",
+        "datatype": {
+          "type": "int32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/timing_data/upload"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "processing",
+        "datatype": {
+          "type": "int32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/timing_data/processing"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "download",
+        "datatype": {
+          "type": "int32",
+          "index": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "source": {
+            "from_json_pointers": [
+              "/timing_data/download"
+            ]
+          },
+          "suppress": false
+        }
+      },
+      {
+        "name": "unknown",
+        "datatype": {
+          "type": "map",
+          "index": true,
+          "catch_all": true,
+          "format": null,
+          "resolution": "seconds",
+          "default": null,
+          "script": null,
+          "elements": [
+            {
+              "type": "string",
+              "index": true
+            },
+            {
+              "type": "string",
+              "index": true
+            }
+          ],
+          "source": null,
+          "suppress": true
+        }
+      }
+    ],
+    "compression": "",
+    "wurfl": null,
+    "format_details": {
+      "flattening": {
+        "depth": null,
+        "active": false,
+        "map_flattening_strategy": {
+          "left": "",
+          "right": ""
+        },
+        "slice_flattening_strategy": {
+          "left": "",
+          "right": ""
+        }
+      }
+    }
+  },
+  "url": "https://demo.trafficpeak.live/config/v1/orgs/c1834e11-9716-4971-9a5f-d8c07f4f6b3a/projects/35adf882-2824-40a3-a712-b79502ab6161/tables/2061c58d-72c9-4229-a51e-985cece0a4f0/transforms/d73e8033-3dde-4b54-831c-1c10ffe8fa7e",
+  "type": "json",
+  "table": "2061c58d-72c9-4229-a51e-985cece0a4f0"
+}
